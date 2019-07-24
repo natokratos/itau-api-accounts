@@ -15,12 +15,13 @@ import com.itau.core.service.client.AccountsClientImpl;
 @RequestMapping("/accounts")
 public class AccountsController {
 	@GetMapping(value = "/list")
-	public List<Account> getList(String customerId) {
+	public List<Account> getList(String customerId, String authorization) {
 		return new AccountsClientImpl().getAccountsImplPort().getList(customerId);
 	}
 	
 	@GetMapping(value = "/get")
-	public Account getRead(@WebParam(name = "accountId") String accountId, @WebParam(name = "customerId") String customerId) {
+	//public Account getRead(@WebParam(name = "accountId") String accountId, @WebParam(name = "customerId") String customerId, String authorization) {
+	public Account getRead(String accountId, String customerId, String authorization) {
 		return new AccountsClientImpl().getAccountsImplPort().getRead(accountId, customerId);
 	}
 
