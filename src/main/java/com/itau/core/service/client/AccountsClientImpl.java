@@ -19,7 +19,7 @@ import com.itau.core.service.server.AccountsServer;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "AccountsImplService", targetNamespace = "http://server.service.core.itau.com/", wsdlLocation = "http://localhost:9090/services/accounts?wsdl")
+@WebServiceClient(name = "AccountsImplService", targetNamespace = "http://server.service.core.itau.com/", wsdlLocation = "http://itau-core:9090/services/accounts?wsdl")
 public class AccountsClientImpl
     extends Service
 {
@@ -32,7 +32,7 @@ public class AccountsClientImpl
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://localhost:9090/services/accounts?wsdl");
+            url = new URL("http://itau-core:9090/services/accounts?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }
